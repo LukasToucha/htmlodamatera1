@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+
+<head>
+<style>
+    p {font:calibri}
+    #uvod {position:absolute; width:auto; height:300px; left:175px; background-color:#262729 ; border:4px solid; padding:10px; color:#90cae2;} 
+        a {color:#84db97} 
+        a:visited {color:#c6e2cc} a:hover {color:#9effb3}
+    #menu {position:fixed; width:140px; height:588px; background-color:#141516; border:4px solid; padding:10px; color:#90cae2}
+        a {color:#84db97} 
+        a:visited {color:#c6e2cc} a:hover {color:#9effb3}
+    #obsah {position:absolute; width:1160px; left:175px; top:330px; padding:10px}
+    #stranky {position:absolute; width:1145px; left:0px; top:100%; height:10px; border:4px solid; padding:10px; color:#90cae2; background-color:#262729}
+        a:visited {color:#c6e2cc} a:hover {color:#9effb3}
+</style>
+</head>
+
+<body>
+
+<div id="uvod">
+    <h1 align="center" font="arial">Průodce html od začátečníka začátečníkovi</h1>
+   
+    <h2>Proč to dělám</h2>
+    Možná stejně jako vy, potřebuji vytvořit vlastní stránku, ale nemám s tím žádné zkušenosti. Rozhodl jsem se tedy spojit proces mého seznamování
+    se s html programováním a výslednou stránku do jednoho projektu. Pokusím se, aby se vzhled stránky postupně měnil spolu s popisem její tvorby.
+
+    <h2>Co je potřeba</h2>
+    Jako první budeme potřebovat program, ve kterém můžeme programovat. Já momentálně používám <a href="https://code.visualstudio.com/">
+    Visual studio code</a>. Například <a href="https://www.hostinger.com/tutorials/best-html-editors#Best_Free_HTML_Editors_for_2024">
+    zde</a> si ale můžete vybrat jakýkoliv program vám bude vyhovovat a použít se dá i běžný poznámkový blok.
+
+    <h2>Čistý start:</h2>
+</div>
+<div id="menu">
+    <h3>Obsah:</h3>
+    <ol>
+    <li>Úvod</li>
+    <li><a>Úprava textu</a></li>
+    <li><a>Tabulky</a></li>
+    <li><a>Odrážky</a></li>
+    <li><a>Odkazy</a></li>
+    <li><a>CSS</a></li>
+    <li><a>Návrh stránky</a></li>
+    </ol> 
+</div>
+<div id="obsah">
+    Všechny vlastnosti stránky či pouze její části se definují pomocí takzvaných tagů. Tagy se uzavírají do takovýchto závorek &lt &gt.
+    Tagy mohou být párové nebo nepárové. Párové ovlivňují text, který se nachází mezi první a druhou částí tagu, kdežto nepárové platí obecně. 
+    Na začátku každého kódu se definuje typ dokumentu nepárovým tagem &lt!DOCTYPE&gt.V našem případě &ltDOCTYPE html&gt. Začátek a konec 
+    dokumentu určuje tag &lthtml&gt. Dále jsou důležité párové tagy &lthead&gt a &ltbody&gt. To co se nachází mezi první a druhou částí 
+    &lthead&gt se objeví v hlavičce stránky zatímco &ltbody&gt tvoří její hlavní část. Takže základní kostra dokumentu bude vypadat nějak takto: 
+    <img src="htmlkostra.png" align="top"><br> Obrázek jsem na stránku vložil pomocí tagu &ltimg&gt. Jako většina tagů, má i tento své atributy, 
+    které se píší přímo do tagu a oddělují se mezerníkem. Pro obrázek je nejdůležitějším atributem "src", tedy zdroj. Zdroj se udává buďto jako 
+    relativní, nebo joko absolutní adresa. Při použití relativní adresi musí být obrázek ve stejném adresáři jako kód stránky a do zdroje se 
+    píše pouze název a typ souboru. V mém případě pak tag vypadá takhle: &ltimg src="htmlkostra.png"&gt. U absolutní adresy se do zdroje udává 
+    URL obrázku. Něco jako &ltimg src="https://www.stranka.cz/images/htmlkostra.png"&gt. Další důležité atributy jsou "alt" (popisek namísto 
+    nenačteného obrázku), "width" (šířka), "height" (výška) a "align" (zarovnání: align="right"/"left"/"top"/"middle"/"bottom").
+    <br>Můžeme se pustit do úpravy textu. Teď by se mi hodil nadpis.
+    <h3>Úprava textu</h3> Různé úrovně nadpisů se tvoří tagy &lth1&gt, &lth2&gt, &lth3&gt... až &lth6&gt. Nadpisy mají také atribut "align" 
+    (left, right, center, justify = zarovnání do bloku).<br> Mezi touto a předchozí řádkou jsem použil zalomení. K tomu slouží tag &ltbr&gt. 
+    Většinou je ovšem výhodnější používat párový tag &ltp&gt, tedy odstavec, který má také atribut "align" se stejnými hodnotami jako nadpis. 
+    Podobně funguje i tag &ltdiv&gt, což je oddíl jakéhokoliv textu či objektů. 
+    <p>
+        Pro vzhled písma je důležitý tag &ltfont&gt, který má atributy "face" (font písma), "size" (velikost odstupňovaná od 1 do 7), a color 
+        (barva). Některé základní barvy lze zapsat jejich anglickým názvem, nebo pro jakoukoliv barvu lze použít procentový, desítkový nebo 
+        šestnáctkový zápis. Výsledný zápis tagu &ltfont&gt může vypadat nějak takto: 
+        <font face="arial" size="4" color="#0000FF">&ltfont face="arial" size="4" color="#0000FF"&gt&lt/font&gt</font>
+    </p>
+    <p>
+        Mezi další tagy pro úpravu písma patří &lti&gt (<i>kurzíva</i>), &ltb&gt (<b>tučné písmo</b>), &ltu&gt (<u>podtržení</u>), &ltsup&gt 
+        (horní<sup>index</sup>), &ltsub&gt (dolní<sub>index</sub>).
+    </p>
+    <div id="stranky" align="middle">
+        1, <a>2</a>, <a>3</a>, <a>4</a> <a>&gt</a>
+    </div>
+</div>
+
+</body>
